@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -31,7 +32,7 @@ public class binarySearch {
 
         LocalTime start = LocalTime.now();
         quickSort(whereToFind, 0, whereToFind.size() - 1);
-        whereToFind.forEach(System.out::println);
+
         LocalTime endSort = LocalTime.now();
         for (String s : whatToFind) {
             if(searchBinary(whereToFind, s)) count++;
@@ -60,8 +61,6 @@ public class binarySearch {
         int left = 0;
         int right = whereToFind.size() - 1;
 
-       // whereToFind.forEach(System.out::println);
-
         while (left <= right) {
             int middle = left + (right - left)/2;
             if (whereToFind.get(middle).split("\\d+ ")[1].compareTo(whatToFind) == 0) {
@@ -84,11 +83,11 @@ public class binarySearch {
 
         while (leftPointer < rightPointer) {
 
-            while (list.get(leftPointer).split("\\d+ ")[1].compareTo(pivot) < 0 && leftPointer < rightPointer) {
+            while (list.get(leftPointer).split("\\d+ ")[1].compareTo(pivot) <= 0 && leftPointer < rightPointer) {
                 leftPointer++;
             }
 
-            while (list.get(rightPointer).split("\\d+ ")[1].compareTo(pivot) > 0 && leftPointer < rightPointer) {
+            while (list.get(rightPointer).split("\\d+ ")[1].compareTo(pivot) >= 0 && leftPointer < rightPointer) {
                 rightPointer--;
             }
             swap(list, leftPointer, rightPointer);
