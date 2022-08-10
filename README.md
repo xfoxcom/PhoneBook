@@ -3,3 +3,4 @@ Implementation of different sorting and searching algorithms with time calculati
 1. Linear search.
 2. Bubble sort + jumping search.
 3. Quick sort + binary search.
+4. Instant search with HashMap.
