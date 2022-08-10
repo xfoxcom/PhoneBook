@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class linearSearch {
-    public linearSearch(File whatLookFor, File whereLookFor) {
+   public linearSearch(File whatLookFor, File whereLookFor) {
     }
     public static long[] searchLinear (File whatLookFor, File whereLookFor) throws FileNotFoundException {
         List<String> whatToFind = new ArrayList<>();

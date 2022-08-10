@@ -2,7 +2,7 @@ package phonebook;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.math.BigDecimal;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
@@ -14,11 +14,8 @@ public class Main {
         jumpSearch.searchJump(find, directory, timePast);
         System.out.println();
         binarySearch.searchBinary(find, directory);
-
-    }
-    public int mySqrt(int x) {
-        int r = 1;
-        x = r*r;
-        return r;
+        System.out.println();
+        instantSearch.searchInstant(find, directory);
     }
 }
+
